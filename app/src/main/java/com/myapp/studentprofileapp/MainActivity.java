@@ -11,9 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView imgViewAttd;
+    ImageView imageViewResult;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +28,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        imgViewAttd = findViewById(R.id.imgViewAttd);
-        imgViewAttd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        imageViewResult = findViewById(R.id.imgViewResult);
 
-            }
-        });
+
+
 
 
 

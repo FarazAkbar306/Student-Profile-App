@@ -177,6 +177,7 @@
                             android:layout_height="48dp"
                             android:clickable="true"
                             android:focusable="true"
+                            android:contentDescription="attendenceImage"
                             app:srcCompat="@drawable/attendence" />
 
                         <TextView

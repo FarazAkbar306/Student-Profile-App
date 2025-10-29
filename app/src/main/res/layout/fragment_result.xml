@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7D8685"
-    tools:context=".ResultFragment">
+    tools:context=".resultFragment">
 
     <LinearLayout
         android:id="@+id/fragmentContainerView"
@@ -14,106 +13,402 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/headerCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="#6D230C"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="15dp">
+            android:layout_marginBottom="40dp"
+            android:padding="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="12dp">
 
             <TextView
-                android:id="@+id/txtHeader"
+                android:id="@+id/textView17"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="16dp"
-                android:text="BSIT P-III Timetable"
-                android:textColor="#fff"
-                android:textSize="24sp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Result"
+                android:textSize="40sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            app:cardBackgroundColor="#C2C2C2"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal" >
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="12dp">
 
                     <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
 
                         <TableRow
+                            android:id="@+id/headerRow"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="10dp">
+                            android:layout_marginBottom="8dp">
 
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/txtSerialNO"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Day"
-                                android:textSize="28dp"
+                                android:text="Serial NO"
+                                android:textSize="18dp"
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView17"
+                                android:id="@+id/txtCourseName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2:00 - 2:50"
-                                android:textSize="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Course"
+                                android:textSize="18dp"
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView18"
+                                android:id="@+id/txtInstructor"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="TextView" />
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Instructor"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView19"
+                                android:id="@+id/txtAttd"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="TextView" />
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Attendance"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/txtMidMarks"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="TextView" />
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="MidTerm Marks"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtFinalMarks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Final Marks"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtTotalMarks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Total Marks"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtObtainedMarks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Obtained Marks"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtQP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="QP"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
                         </TableRow>
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/txt01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="English"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="XYZ"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="30"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt06"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="70"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt09"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textSize="16sp" />
+                        </TableRow>
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent" >
+
+                            <TextView
+                                android:id="@+id/txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Physics"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="XYZ"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="30"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="70"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textSize="16sp" />
+                        </TableRow>
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
+                            android:layout_height="match_parent" >
+
+                            <TextView
+                                android:id="@+id/txt10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="Physics"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="XYZ"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="30"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="70"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="100"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txt18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textSize="16sp" />
+                        </TableRow>
                     </TableLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-        </androidx.cardview.widget.CardView>
-
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
     </LinearLayout>
-
-
 </FrameLayout>
